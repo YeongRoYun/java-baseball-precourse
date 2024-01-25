@@ -45,8 +45,9 @@ public class SystemOutputTest {
         output.miss(1, 0);
         output.miss(0, 1);
         output.miss(1, 1);
+        output.miss(0, 0);
         // then
-        assertEquals("1볼\n1스트라이크\n1볼 1스트라이크\n", outputStreamCaptor.toString());
+        assertEquals("1볼\n1스트라이크\n1볼 1스트라이크\n낫싱\n", outputStreamCaptor.toString());
     }
     @DisplayName("Test End")
     @Test
