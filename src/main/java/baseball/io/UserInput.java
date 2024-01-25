@@ -1,5 +1,5 @@
 package baseball.io;
-
+import java.util.*;
 import camp.nextstep.edu.missionutils.Console;
 
 public class UserInput {
@@ -8,6 +8,12 @@ public class UserInput {
         if (rawInput.length() != 3) {
             throw new IllegalArgumentException("3자리 숫자를 입력해야 합니다.");
         }
+        try {
+            Integer.parseInt(rawInput);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("3자리 숫자를 입력해야 합니다.");
+        }
+
         return rawInput;
     }
 

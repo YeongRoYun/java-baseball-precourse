@@ -11,13 +11,17 @@ public class SystemOutput {
     public void miss(int ball, int strike) {
         StringBuilder builder = new StringBuilder();
 
-        if (ball > 0) {
-            builder.append(ball + "볼");
+        if (ball == 0 && strike == 0) {
+            System.out.println("낫싱");
+        } else {
+            if (ball > 0) {
+                builder.append(ball + "볼");
+            }
+            if (strike > 0) {
+                builder.append(" " + strike + "스트라이크");
+            }
+            System.out.println(builder.toString().trim());
         }
-        if (strike > 0) {
-            builder.append(" " + strike + "스트라이크");
-        }
-        System.out.println(builder.toString().trim());
     }
 
     public void end() {
