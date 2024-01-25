@@ -6,7 +6,7 @@ public class BaseballRule {
 
     public BaseballResult check(String input, String goal) {
         if (Objects.isNull(input) || Objects.isNull(goal) || input.length() != 3 || goal.length() != 3) {
-            throw new IllegalArgumentException("입력값이 잘못되었습니다. 3자리 숫자를 입력해주세요");
+            throw new IllegalArgumentException("입력값이 잘못되었습니다. 3자리 숫자를 입력해주세요: goal: " + goal + "/input: " + input);
         }
         // input, goal 모두 3자리 숫자
         Set<Character> goalSet = new HashSet<>();
